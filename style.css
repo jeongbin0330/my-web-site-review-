@@ -2,16 +2,16 @@ body{
     margin: 0;
   }
   a {
-     color:black; 
+     color:gray; 
   }
   h1 {
     font-size: 80px; text-align: center; 
-    border-bottom : 5px solid black;
+    border-bottom : 5px solid gray;
     margin: 0px;
     padding: 15px;
   }
   #grid ol{
-    border-right: 5px solid black;
+    border-right: 5px solid gray;
     width: 150px;
     margin: 0;
     padding: 20px;
