@@ -8,13 +8,17 @@
     
 <body>
  <h1><a href="index.html">Programing Language</h1></a>   
- <input type="button" value="night" onclick="
- document.querySelector('body').style.backgroundColor='black';
- document.querySelector('body').style.color='white';
- ">
- <input type="button" value="day" onclick="
- document.querySelector('body').style.backgroundColor='white';
- document.querySelector('body').style.color='balck';
+ <input  type="button" value="night" onclick="
+ var target = document.querySelector('body');
+ if(this.value ==='night'){
+   target.style.backgroundColor='black';
+   target.style.color='white';
+ this.value = 'day';
+ }else {
+   target.style.backgroundColor='white';
+   target.style.color='balck';
+ this.value = 'night';
+ }
  ">
 <div id="grid">
   <ol>
@@ -50,5 +54,17 @@
         <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
         </div>
 </p>
+<input  type="button" value="night" onclick="
+ var target = document.querySelector('body');
+ if(this.value ==='night'){
+   target.style.backgroundColor='black';
+   target.style.color='white';
+ this.value = 'day';
+ }else {
+   target.style.backgroundColor='white';
+   target.style.color='balck';
+ this.value = 'night';
+ }
+ ">
 </body>
 </html>
