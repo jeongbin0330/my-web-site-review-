@@ -3,19 +3,47 @@
 <head> 
  <title>programing Language - Java</title>
  <meta charset="urf-8">
+ <script>
+  var Links ={
+    setColor:function(color){
+    var alist = document.querySelectorAll('a');
+    var i = 0
+    while(i < alist.length){
+    alist[i].style.color = color;
+    i = i +1;}
+  }
+  }
+  var Body ={
+    setColor:function(color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor:function(color){
+    document.querySelector('body').style.backgroundColor = color;
+  }
+  }
+  function nightDayHandler(self){
+   var target = document.querySelector('body')
+  if (self.value === 'night'){
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    self.value = 'day'
+    Links.setColor('powderblue');
+  } else {
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    self.value = 'night'
+    Links.setColor('blue');
+ }
+}
+ </script>
  <link rel="stylesheet" href="style.css">
 </head>
     
 <body>
   <h1><a href="index.html">Programing Language</h1></a>   
   <input type="button" value="night" onclick="
- document.querySelector('body').style.backgroundColor='black';
- document.querySelector('body').style.color='white';
- ">
- <input type="button" value="day" onclick="
- document.querySelector('body').style.backgroundColor='white';
- document.querySelector('body').style.color='balck';
- ">
+    nightDayHandler(this);
+  ">
  <div id="grid">
   <ol>
     <Li><a href="1.html">python</Li></a>
@@ -66,5 +94,17 @@
       <noscript>라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
       </div>
 </p>
+<input  type="button" value="night" onclick="
+ var target = document.querySelector('body');
+ if(this.value ==='night'){
+   target.style.backgroundColor='black';
+   target.style.color='white';
+ this.value = 'day';
+ }else {
+   target.style.backgroundColor='white';
+   target.style.color='balck';
+ this.value = 'night';
+ }
+ ">
 </body>
 </html>
